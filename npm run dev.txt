@@ -1,0 +1,570 @@
+ npm run dev
+
+> my-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.2.0.2:3000
+✓ Ready in 668ms
+
+○ Compiling / ...
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 200 in 9.6s (next.js: 8.9s, application-code: 713ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="zh-CN" className="bg-[#F5F5F..." suppressHydrationWarning={true}>
+                          <body
+                            className="font-sans antialiased bg-[#F5F5F7] dark:bg-[#000000] text-neutral-900 dark:text..."
+-                           __processed_4bea9743-bc19-4752-adc2-95729becddd9__="true"
+-                           bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                  ...
+
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /questions 200 in 1818ms (next.js: 1738ms, application-code: 80ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /mistakes 200 in 1409ms (next.js: 1342ms, application-code: 67ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /mistakes 200 in 140ms (next.js: 10ms, application-code: 130ms)
+ GET /questions 200 in 46ms (next.js: 11ms, application-code: 36ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 200 in 54ms (next.js: 5ms, application-code: 48ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /questions 200 in 32ms (next.js: 6ms, application-code: 26ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /mistakes 200 in 33ms (next.js: 6ms, application-code: 27ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /exam 200 in 1593ms (next.js: 1448ms, application-code: 145ms)
+ GET /exam 200 in 71ms (next.js: 29ms, application-code: 42ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /mistakes 200 in 42ms (next.js: 6ms, application-code: 36ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /stats 200 in 2.0s (next.js: 1970ms, application-code: 67ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /exam 200 in 40ms (next.js: 6ms, application-code: 34ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /questions 200 in 44ms (next.js: 8ms, application-code: 36ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 200 in 56ms (next.js: 6ms, application-code: 50ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /questions 200 in 51ms (next.js: 9ms, application-code: 43ms)
+⚠ ./app/globals.css:8420:2
+Parsing CSS source code failed
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+'root' is not recognized as a valid pseudo-element. Did you mean ':root' (pseudo-class) or is this a typo?
+
+Generated code of PostCSS transform of file content of app/globals.css:
+./app/globals.css:8420:2
+  8418 |   initial-value: 0;
+  8419 | }
+> 8420 | ::root {
+       |  ^
+  8421 |   --background: oklch(1 0 0);
+  8422 |   --foreground: oklch(0.145 0 0);
+  8423 |   --card: oklch(1 0 0);
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 200 in 86ms (next.js: 12ms, application-code: 74ms)

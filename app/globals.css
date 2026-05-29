@@ -1,0 +1,294 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ── 主题变量 — 使用 html 而非 :root 避免 PostCSS 解析为 ::root ── */
+html {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+html.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  color: #f0f0f0;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  html.dark main {
+    background-color: #000000 !important;
+  }
+  html.dark .bg-white\/60,
+  html.dark .bg-white\/70,
+  html.dark .bg-white\/80 {
+    background-color: rgba(28, 28, 30, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   暗色模式 — 终极覆盖规则
+   
+   Tailwind v4 @theme inline 将颜色值硬编码到工具类中
+   （而非用 var() 引用），所以 CSS 变量覆盖无效。
+   
+   必须用 html.dark + !important 直接覆盖生成的类。
+   所有规则放在 @layer 之外以确保优先级最高。
+   ══════════════════════════════════════════════════════ */
+
+/* ── 1. 文字颜色：纯白（深色中性 + 标题） ── */
+html.dark .text-neutral-950,
+html.dark .text-neutral-900,
+html.dark .text-neutral-800,
+html.dark .text-neutral-700,
+html.dark .text-neutral-600 {
+  color: #ffffff !important;
+}
+
+html.dark .text-gray-950,
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700,
+html.dark .text-gray-600 {
+  color: #ffffff !important;
+}
+
+html.dark .text-black,
+html.dark [class*="text-black/"] {
+  color: #ffffff !important;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #ffffff !important;
+}
+
+/* ── 2. 文字颜色：浅灰（次要/辅助文字） ── */
+html.dark .text-neutral-500 {
+  color: #d4d4d4 !important;
+}
+
+html.dark .text-neutral-400 {
+  color: #a3a3a3 !important;
+}
+
+html.dark .text-neutral-300 {
+  color: #8a8a8a !important;
+}
+
+html.dark .text-neutral-200 {
+  color: #6b6b6b !important;
+}
+
+html.dark .text-gray-500 {
+  color: #d4d4d4 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #a3a3a3 !important;
+}
+
+/* ── 3. 特殊颜色值 ── */
+html.dark .text-\[\#202124\],
+html.dark .text-\[\#1D1D1F\] {
+  color: #ffffff !important;
+}
+
+/* ── 4. 无颜色类的段落/列表/表格 ── */
+html.dark p:not([class*="text-"]),
+html.dark li:not([class*="text-"]),
+html.dark label:not([class*="text-"]),
+html.dark td:not([class*="text-"]),
+html.dark th:not([class*="text-"]),
+html.dark dd:not([class*="text-"]),
+html.dark blockquote:not([class*="text-"]) {
+  color: #e8e8e8 !important;
+}
+
+/* ── 5. span 继承父元素颜色 ── */
+html.dark span {
+  color: inherit;
+}
+
+/* ── 6. 白色/浅色背景 → 暗色 ── */
+html.dark .bg-white {
+  background-color: rgba(28, 28, 30, 0.8) !important;
+}
+
+html.dark .bg-neutral-50,
+html.dark .bg-neutral-50\/60 {
+  background-color: rgba(28, 28, 30, 0.4) !important;
+}
+
+html.dark .bg-neutral-100,
+html.dark .bg-neutral-100\/80 {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .bg-\[F8F9FA\],
+html.dark .bg-\[\#F8F9FA\] {
+  background-color: rgba(28, 28, 30, 0.4) !important;
+}
+
+/* ── 7. 边框 ── */
+html.dark .border-black\/\[0\.06\],
+html.dark .border-black\/\[0\.04\],
+html.dark .border-black\/\[0\.05\] {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .ring-black\/5,
+html.dark .ring-1\/5 {
+  --tw-ring-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── 8. 输入框 ── */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: rgba(28, 28, 30, 0.6) !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ── 9. 按钮 ghost 背景 ── */
+html.dark .bg-black\/\[0\.04\],
+html.dark .bg-black\/\[0\.03\] {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .bg-black\/\[0\.06\] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── 10. body 强制文字色 ── */
+html.dark body {
+  color: #f0f0f0 !important;
+}
+
+/* ── 11. 灵动岛动画关键帧 ── */
+@keyframes island-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes island-glow-red {
+  0%, 100% { box-shadow: 0 4px 24px rgba(255, 59, 48, 0.4); }
+  50% { box-shadow: 0 4px 40px rgba(255, 59, 48, 0.7); }
+}
